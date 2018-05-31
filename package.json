@@ -19,10 +19,10 @@
     "eslint-config-byungi": "^0.0.16"
   },
   "dependencies": {
+    "import-fresh": "^2.0.0",
     "plugin-error": "^1.0.1",
     "resolve-from": "^4.0.0",
     "through2": "^2.0.3",
-    "velocityjs": "^1.0.1",
-    "vm2": "^3.6.0"
+    "velocityjs": "^1.0.1"
   }
 }

@@ -3,6 +3,7 @@ const PluginError = require('plugin-error')
 const {resolve, basename, extname} = require('path')
 const {silent: resolveFrom} = require('resolve-from')
 const {Compile, parse} = require('velocityjs')
+const importFresh = require('import-fresh')
 
 module.exports = function (ctx, opts = {}) {
   return through.obj((file, enc, cb) => {
@@ -26,11 +27,11 @@ function resolveUserData (ctx, file) {
   if (typeof ctx !== 'string') return Object.assign({}, ctx, file.data)
 
   try {
-    return require('vm2').NodeVM.file(
+    return importFresh(
       resolveFrom(process.cwd(), ctx) ||
       resolveFrom(process.cwd(), resolve(ctx, basename(file.path, extname(file.path))))
     )
   } catch (err) {
-    return err
+    return {}
   }
 }
