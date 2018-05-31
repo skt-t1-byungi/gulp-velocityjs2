@@ -12,7 +12,7 @@ module.exports = function (ctx, opts = {}) {
 
     try {
       const asts = parse(file.contents.toString(), opts.blocks, opts.ignorespace)
-      const rendered = (new Compile(asts)).render(resolveUserData(ctx, file), opts.macros)
+      const rendered = (new Compile(asts, opts)).render(resolveUserData(ctx, file), opts.macros)
 
       file.contents = Buffer.from(rendered)
     } catch (err) {
