@@ -2,7 +2,7 @@ const through = require('through2')
 const PluginError = require('plugin-error')
 const {resolve, basename, extname} = require('path')
 const {silent: resolveFrom} = require('resolve-from')
-const {Compile, Parser} = require('velocityjs')
+const {Compile, parse} = require('velocityjs')
 
 module.exports = function (ctx, opts = {}) {
   return through.obj((file, enc, cb) => {
@@ -23,7 +23,7 @@ module.exports = function (ctx, opts = {}) {
     }
 
     try {
-      const asts = Parser.parse(file.contents.toString(), opts.blocks, opts.ignorespace)
+      const asts = parse(file.contents.toString(), opts.blocks, opts.ignorespace)
       file.contents = Buffer.from((new Compile(asts)).render(ctx, opts.macros))
     } catch (err) {
       return cb(new PluginError('gulp-velocity.js', err, {fileName: file.path}))
