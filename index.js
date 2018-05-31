@@ -3,6 +3,7 @@ const PluginError = require('plugin-error')
 const {resolve, basename, extname} = require('path')
 const {silent: resolveFrom} = require('resolve-from')
 const {Compile, parse} = require('velocityjs')
+const requireUncached = require('require-uncached')
 
 module.exports = function (ctx, opts = {}) {
   return through.obj((file, enc, cb) => {
@@ -12,7 +13,7 @@ module.exports = function (ctx, opts = {}) {
     let userData
     if (typeof ctx === 'string') {
       try {
-        userData = require(
+        userData = requireUncached(
           resolveFrom(process.cwd(), ctx) ||
           resolveFrom(process.cwd(), resolve(ctx, basename(file.path, extname(file.path))))
         )
