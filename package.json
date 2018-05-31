@@ -1,0 +1,27 @@
+{
+  "name": "gulp-velocity.js",
+  "version": "0.0.0",
+  "main": "index.js",
+  "author": {
+    "email": "tiniwz@gmail.com",
+    "name": "skt-t1-byungi"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skt-t1-byungi/gulp-velocity.js.git"
+  },
+  "license": "MIT",
+  "eslintConfig": {
+    "extends": "byungi"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-byungi": "^0.0.16"
+  },
+  "dependencies": {
+    "plugin-error": "^1.0.1",
+    "resolve-from": "^4.0.0",
+    "through2": "^2.0.3",
+    "velocity.js": "^0.3.4"
+  }
+}
