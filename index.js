@@ -9,22 +9,23 @@ module.exports = function (ctx, opts = {}) {
     if (file.isNull()) return cb(null, file)
     if (file.isStream()) return cb(new PluginError('gulp-velocity.js', 'Streaming not supported!'))
 
+    let userData
     if (typeof ctx === 'string') {
       try {
-        ctx = require(
+        userData = require(
           resolveFrom(process.cwd(), ctx) ||
           resolveFrom(process.cwd(), resolve(ctx, basename(file.path, extname(file.path))))
         )
       } catch (err) {
-        ctx = {}
+        userData = {}
       }
     } else {
-      ctx = Object.assign({}, ctx, file.data)
+      userData = Object.assign({}, ctx, file.data)
     }
 
     try {
       const asts = parse(file.contents.toString(), opts.blocks, opts.ignorespace)
-      file.contents = Buffer.from((new Compile(asts)).render(ctx, opts.macros))
+      file.contents = Buffer.from((new Compile(asts)).render(userData, opts.macros))
     } catch (err) {
       return cb(new PluginError('gulp-velocity.js', err, {fileName: file.path}))
     }
