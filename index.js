@@ -2,7 +2,7 @@ const through = require('through2')
 const PluginError = require('plugin-error')
 const {resolve, basename, extname} = require('path')
 const {silent: resolveFrom} = require('resolve-from')
-const {Compile, Parser} = require('velocity.js')
+const {Compile, Parser} = require('velocityjs')
 
 module.exports = function (ctx, opts = {}) {
   return through.obj((file, enc, cb) => {
