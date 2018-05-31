@@ -10,7 +10,17 @@
     "type": "git",
     "url": "https://github.com/skt-t1-byungi/gulp-velocityjs2.git"
   },
+  "keywords": [
+    "velocityjs",
+    "velocity",
+    "gulp",
+    "vtl",
+    "template"
+  ],
   "license": "MIT",
+  "files": [
+    "index.js"
+  ],
   "eslintConfig": {
     "extends": "byungi"
   },
