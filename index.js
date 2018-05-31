@@ -9,14 +9,14 @@ module.exports = function (ctx, opts = {}) {
     if (file.isNull()) return cb(null, file)
     if (file.isStream()) return cb(new PluginError('gulp-velocity.js', 'Streaming not supported!'))
 
-    if (typeof data === 'string') {
+    if (typeof ctx === 'string') {
       try {
         ctx = require(
           resolveFrom(process.cwd(), ctx) ||
           resolveFrom(process.cwd(), resolve(ctx, basename(file.path, extname(file.path))))
         )
       } catch (err) {
-        return cb(new PluginError('gulp-velocity.js', `Can not find data file(${ctx}).`))
+        ctx = {}
       }
     } else {
       ctx = Object.assign({}, ctx, file.data)
