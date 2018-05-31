@@ -1,5 +1,6 @@
 {
   "name": "gulp-velocityjs2",
+  "description": "Gulp compile plugin for velocity(http://velocity.apache.org/) template",
   "version": "0.0.8",
   "main": "index.js",
   "author": {
@@ -21,12 +22,17 @@
   "files": [
     "index.js"
   ],
+  "scripts": {
+    "test": "ava"
+  },
   "eslintConfig": {
     "extends": "byungi"
   },
   "devDependencies": {
+    "ava": "^0.25.0",
     "eslint": "^4.19.1",
-    "eslint-config-byungi": "^0.0.16"
+    "eslint-config-byungi": "^0.0.16",
+    "vinyl": "^2.1.0"
   },
   "dependencies": {
     "import-fresh": "^2.0.0",
