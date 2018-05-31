@@ -22,6 +22,6 @@
     "plugin-error": "^1.0.1",
     "resolve-from": "^4.0.0",
     "through2": "^2.0.3",
-    "velocity.js": "^0.3.4"
+    "velocityjs": "^1.0.1"
   }
 }
