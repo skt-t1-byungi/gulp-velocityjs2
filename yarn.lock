@@ -1436,6 +1436,10 @@ velocityjs@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/velocityjs/-/velocityjs-1.0.1.tgz#b20072f873912050a0c68ff678d3455acccf02bb"
 
+vm2@^3.6.0:
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.6.0.tgz#a6e6370c57e6edd77decfb7b1ad64fc87dbf2d4e"
+
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/vue-eslint-parser/-/vue-eslint-parser-2.0.3.tgz#c268c96c6d94cfe3d938a5f7593959b0ca3360d1"
