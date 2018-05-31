@@ -71,7 +71,7 @@ Compile options. details https://github.com/shepherdwind/velocity.js
 - ignorespace
 - macros
 
-#### Related
+## Related
 - [shepherdwind/velocity.js](https://github.com/shepherdwind/velocity.js)
 - http://velocity.apache.org
 
