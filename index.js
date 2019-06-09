@@ -34,7 +34,7 @@ function resolveUserData (path, file) {
     try {
         userData = importFresh(
             resolveFrom(cwd, path) ||
-      resolveFrom(cwd, resolve(path, basename(file.path, extname(file.path))))
+            resolveFrom(cwd, resolve(path, basename(file.path, extname(file.path))))
         )
     } catch (err) {
         userData = {}
