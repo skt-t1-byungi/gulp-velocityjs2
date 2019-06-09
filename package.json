@@ -1,44 +1,44 @@
 {
-  "name": "gulp-velocityjs2",
-  "description": "Gulp compile plugin for velocity(http://velocity.apache.org/) template",
-  "version": "0.0.11",
-  "main": "index.js",
-  "author": {
-    "email": "tiniwz@gmail.com",
-    "name": "skt-t1-byungi"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/skt-t1-byungi/gulp-velocityjs2.git"
-  },
-  "keywords": [
-    "velocityjs",
-    "velocity",
-    "gulp",
-    "vtl",
-    "template"
-  ],
-  "license": "MIT",
-  "files": [
-    "index.js"
-  ],
-  "scripts": {
-    "test": "ava"
-  },
-  "eslintConfig": {
-    "extends": "byungi"
-  },
-  "devDependencies": {
-    "ava": "^0.25.0",
-    "eslint": "^4.19.1",
-    "eslint-config-byungi": "^0.0.16",
-    "vinyl": "^2.1.0"
-  },
-  "dependencies": {
-    "import-fresh": "^2.0.0",
-    "plugin-error": "^1.0.1",
-    "resolve-from": "^4.0.0",
-    "through2": "^2.0.3",
-    "velocityjs": "^1.0.1"
-  }
+    "name": "gulp-velocityjs2",
+    "description": "Gulp compile plugin for velocity(http://velocity.apache.org/) template",
+    "version": "0.0.11",
+    "main": "index.js",
+    "author": {
+        "email": "tiniwz@gmail.com",
+        "name": "skt-t1-byungi"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/skt-t1-byungi/gulp-velocityjs2.git"
+    },
+    "keywords": [
+        "velocityjs",
+        "velocity",
+        "gulp",
+        "vtl",
+        "template"
+    ],
+    "license": "MIT",
+    "files": [
+        "index.js"
+    ],
+    "scripts": {
+        "test": "ava"
+    },
+    "eslintConfig": {
+        "extends": "byungi"
+    },
+    "devDependencies": {
+        "ava": "^2.0.0",
+        "eslint": "^5.16.0",
+        "eslint-config-byungi": "^0.2.9",
+        "vinyl": "^2.2.0"
+    },
+    "dependencies": {
+        "import-fresh": "^3.0.0",
+        "plugin-error": "^1.0.1",
+        "resolve-from": "^5.0.0",
+        "through2": "^3.0.1",
+        "velocityjs": "^1.1.3"
+    }
 }
