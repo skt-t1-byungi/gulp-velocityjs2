@@ -29,14 +29,15 @@
         "extends": "byungi"
     },
     "devDependencies": {
-        "ava": "^2.0.0",
-        "eslint": "^5.16.0",
-        "eslint-config-byungi": "^0.2.9",
+        "ava": "^2.2.0",
+        "eslint": "^6.0.1",
+        "eslint-config-byungi": "^0.3.0",
         "vinyl": "^2.2.0"
     },
     "dependencies": {
-        "import-fresh": "^3.0.0",
+        "import-fresh": "^3.1.0",
         "plugin-error": "^1.0.1",
+        "replace-ext": "^1.0.0",
         "resolve-from": "^5.0.0",
         "through2": "^3.0.1",
         "velocityjs": "^1.1.3"
