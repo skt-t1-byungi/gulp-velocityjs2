@@ -39,20 +39,32 @@ output:
 ```
 
 ## API
-### gulpVTL(data?: object|string, options?: object)
-Returns gulp tranform for velocity compilation.
+### gulpVTL([data[, options]])
+Returns gulp transformer for velocity compilation.
 
 #### data
-Set the variable value.
+Set the data values.
 
-##### Data path
-If it is a data path, inject the file data.
-###### Exmaple
+##### object
 ```js
-return gulp.src('template/*.vm')
+gulp.src('index.vm')
+    .pipe(gulpVTL({var1: 'value1', var2: 'value2'}))
+```
+
+##### file
+```js
+gulp.src('index.vm')
+    .pipe(gulpVTL('./data.json'))
+```
+
+##### directory
+If it is a `directory`, set the data that matches the file name in the directory.
+
+```js
+gulp.src('view/*.vm')
   .pipe( gulpVTL('data/') )
 ```
-`template/main.vm`
+`view/main.vm`
 ```
 hello $value
 ```
@@ -60,16 +72,29 @@ hello $value
 ```js
 export.value = 'world'
 ```
-results `hello world`.
+output:
+```html
+hello world
+```
 
 #### options
-Compile options. details https://github.com/shepherdwind/velocity.js
-- escape 
-- unescape
-- env
-- blocks
-- ignorespace
-- macros
+##### Compile options
+details https://github.com/shepherdwind/velocity.js
+
+- `escape`
+- `unescape`
+- `env`
+- `blocks`
+- `ignorespace`
+- `macros`
+
+##### Other options
+###### ext
+Output extension name. Default is html
+
+###### refresh
+If this value is true, import new data from the path without cache. This is useful when in watch mode. Default is false.
+
 
 ## Related
 - [shepherdwind/velocity.js](https://github.com/shepherdwind/velocity.js)
